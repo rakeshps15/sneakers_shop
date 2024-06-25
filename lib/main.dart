@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sneakers_shop/views/intro.dart';
+import 'package:sneakers_shop/views/intro/intro.dart';
 import 'models/cart_model.dart';
 
 void main() {

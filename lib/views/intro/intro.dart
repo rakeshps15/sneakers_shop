@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import '../home.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -22,7 +22,7 @@ class _IntroScreenState extends State<IntroScreen> {
             children: [
               //logo
               Image.asset(
-                'images/logo.png',
+                'assets/images/logo.png',
                 height: 240,
               ),
               const SizedBox(

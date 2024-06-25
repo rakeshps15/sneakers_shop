@@ -7,25 +7,25 @@ class Cart extends ChangeNotifier {
     Shoe(
       name: 'Zoom FREAK',
       description: 'Sneakers that make you feel good',
-      imagePath: 'images/1.png',
+      imagePath: 'assets/images/1.png',
       price: '\$' + '236',
     ),
     Shoe(
       name: 'Air Jordans',
       description: 'Sneakers that make you feel good',
-      imagePath: 'images/2.png',
+      imagePath: 'assets/images/2.png',
       price: '\$' + '220',
     ),
     Shoe(
       name: 'KD Treys',
       description: 'Sneakers that make you feel good',
-      imagePath: 'images/3.png',
+      imagePath: 'assets/images/3.png',
       price: '\$' + '240',
     ),
     Shoe(
       name: 'Air Max',
       description: 'Sneakers that make you feel good',
-      imagePath: 'images/4.png',
+      imagePath: 'assets/images/4.png',
       price: '\$' + '190',
     ),
   ];
@@ -42,6 +42,13 @@ class Cart extends ChangeNotifier {
 
   void addItemToCart(Shoe shoe) {
     userCart.add(shoe);
+    notifyListeners();
+  }
+
+ bool search = false;
+
+  void searchonoff(){
+    search= !search;
     notifyListeners();
   }
 

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sneakers_shop/models/cart_model.dart';
 import 'package:sneakers_shop/views/shop.dart';
 import '../components/bottom_nav.dart';
-import 'cart_page.dart';
-
+import 'cart_page/cart_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,6 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        actions: [IconButton(onPressed: (){
+         Provider.of<Cart>(context,listen:false).searchonoff();
+        }, icon: Icon(Icons.search))],
         leading: Builder(
           builder: (context) => IconButton(
             onPressed: () {
@@ -52,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 DrawerHeader(
                   child: Image.asset(
-                    'images/logo.png',
+                    'assets/images/logo.png',
                     color: Colors.white,
                   ),
                 ),
